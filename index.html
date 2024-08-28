@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"><img src="web_logo.png" alt="Logo"></a>
+        <ul class="menulist">
+            <li><a href="#home" class="active">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#images">Videos</a></li>
+        </ul>
+    </header>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close-btn">&times;</span>
+            <img src="gif1.gif" alt="Pop-up GIF">
+        </div>
+    </div>
+
+
+    <section id="home">
+        <div class="home-content">
+            <h1>WEB DEVELOPMENT</h1>
+            <p>Resource dedicated to exploring why web development is important</p>
+            <a href="#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="about-content">
+            <h2>WHAT IS WEB DEVELOPMENT?</h2>
+            <p>
+                Web development is the process of creating and maintaining websites. It involves building the site’s structure, writing code, ensuring it works on different devices, adding interactive features, testing for errors, and keeping the site updated.
+            </p>
+            <h2>IMPORTANCE.</h2>
+            <h1>Online Presence</h1>
+            <p>
+                Having a website helps people or businesses show who they are and what they do. It’s like having a digital home where people can visit to learn more about you.
+            </p>
+            <h1>Marketing and Sales</h1>
+            <p>
+                Websites are great for marketing and selling stuff. You can use them to show up in search engines, connect with social media, and even sell products directly to customers.
+            </p>
+            <h1>Adaptability</h1>
+            <p>
+                The internet is always changing, and a well-made website can easily be updated to stay current and keep up with new trends.
+            </p>
+            <h1>Accessibility</h1>
+            <p>
+                A website allows people from all over the world to access information, products, and services at any time. 
+            </p>
+
+        </div>       
+    </section>
+
+    
+    <section id="images">
+        <div class="images-content">
+            <h2>Learn More with These Videos</h2>
+            <div class="image-container">
+                <a href="https://youtu.be/FQdaUv95mR8?si=Ba97mduTuWfI4QpN" target="_blank">
+                    <img src="image2.jpg" alt="Image 1" width="320" height="240">
+                </a>
+                <a href="https://youtu.be/xGmIl7QbBiA?si=k_SNy6r6hJdP9Wp0" target="_blank">
+                    <img src="image1.jpg" alt="Image 2" width="320" height="240">
+                </a>
+                <a href="https://youtu.be/PkZNo7MFNFg?si=PtGpqfSMT_R7zfT_" target="_blank">
+                    <img src="image3.jpg" alt="Image 3" width="320" height="240">
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+
+    <footer>
+        <div class="footer-content">
+            <p>2024 | All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        window.addEventListener('scroll', function() {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('header-scrolled');
+            } else {
+                header.classList.remove('header-scrolled');
+            }
+        });
+
+
+
+    window.onload = function() {
+    document.getElementById('popup').style.display = 'block';
+        };
+
+
+    document.querySelector('.close-btn').onclick = function() {
+    document.getElementById('popup').style.display = 'none';
+    };
+
+
+    window.onclick = function(event) {
+        if (event.target == document.getElementById('popup')) {
+            document.getElementById('popup').style.display = 'none';
+        }
+    };
+    </script>
+
+    
+</body>
+
+</html>
